@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple webpage to demonstrate HTML5, semantic tags, accessibility, and SEO practices.">
+    <meta name="keywords" content="web development, HTML, semantic HTML, SEO, accessibility">
+    <meta name="author" content="Felix Shawn">
+    <title>My Simple Webpage</title>
+
+    <!-- External CSS for styling -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        section#home {
+            background-color: #e2e2e2;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Article Styling */
+        article {
+            background-color: #fff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        article h3 {
+            color: #444;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <!-- External JavaScript for Smooth Scrolling -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            for (let link of links) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // Adjust for header height
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" title="Go to Home">Home</a></li>
+                <li><a href="#about" title="Learn More About Me">About Me</a></li>
+                <li><a href="#blog" title="Read My Blog Posts">Blog</a></li>
+                <li><a href="#contact" title="Get in Touch">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to my personal webpage! Here, you'll find information about me, my work, and my interests in web development.</p>
+        <p>This website is built using HTML5, and it's optimized for accessibility and search engine optimization (SEO) best practices.</p>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Felix Shawn, a web developer passionate about creating websites that are both user-friendly and accessible. I have experience in various web technologies and I enjoy learning new things every day!</p>
+        <img src="imgs/IMG_3580.JPG" alt="Felix Shawn, web developer" width="300"><img src="imgs/IMG_3580.JPG"
+                                                                                     height="3456" width="5184"/>
+        <p>If you're interested in collaborating on a project or just want to connect, feel free to reach out to me via the contact page.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>My Blog</h2>
+        <article>
+            <h3>My First Blog Post</h3>
+            <p>Welcome to my blog! In this post, I'll be sharing my journey into web development and some tips I've learned along the way. Stay tuned for more updates!</p>
+        </article>
+
+        <article>
+            <h3>Tips for Accessible Web Design</h3>
+            <p>In this post, I'll dive into the importance of web accessibility and share tips on how to make your websites more inclusive to users with disabilities.</p>
+        </article>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, or if you'd like to discuss potential projects, feel free to reach out via email:</p>
+        <p>Email: <a href="mailto:felixshawn@example.com" title="Send an email to Felix Shawn">felixshawn@example.com</a></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 Felix Shawn. All rights reserved.</p>
+        <p>Follow me on <a href="https://twitter.com/felixshawn" title="Follow Felix Shawn on Twitter">Twitter</a> and <a href="https://www.linkedin.com/in/felixshawn" title="Connect with Felix Shawn on LinkedIn">LinkedIn</a>.</p>
+    </footer>
+
+</body>
+</html>
